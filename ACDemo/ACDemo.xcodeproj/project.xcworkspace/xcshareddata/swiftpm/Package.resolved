@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ACTheme",
+        "repositoryURL": "https://github.com/AppCraftTeam/appcraft-theme-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "60977eeae73af9f8632cc9295cabcb717b51b421",
+          "version": "0.0.1"
+        }
+      },
+      {
+        "package": "DPUIKit",
+        "repositoryURL": "https://github.com/DPLibs/DPUIKit.git",
+        "state": {
+          "branch": null,
+          "revision": "e4eadd71c9ebf46ab36634b382e29f7cca94e3fd",
+          "version": "2.0.0"
+        }
+      },
+      {
+        "package": "Kingfisher",
+        "repositoryURL": "https://github.com/onevcat/Kingfisher.git",
+        "state": {
+          "branch": null,
+          "revision": "8acda585eeb3b1ef72bffe0aa85f52a9bc16605c",
+          "version": "5.15.6"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
