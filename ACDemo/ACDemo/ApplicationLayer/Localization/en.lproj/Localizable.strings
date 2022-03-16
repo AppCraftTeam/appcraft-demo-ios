@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  ACDemo
+
+  Created by Дмитрий Поляков on 14.03.2022.
+  
+*/
+
+"initial_main" = "Hello!";
+"initial_subtitle" = "Fddfg dfgdfg dfgd dgdgdgd fdfgdgfdfs sfds dfs";
+"initial_change_bt" = "Change lang";
+"initial_current_lang" = "Current lang: %@";

@@ -36,5 +36,46 @@ class InitialViewController: DPViewController {
     }
     
     // MARK: - Methods
+    override func setupComponents() {
+        super.setupComponents()
+        
+        self.view.applyTheme { view, theme in
+            view.backgroundColor = theme.mainBg
+        }
+        
+        let mainLabel = UILabel().applyStyles(.numberOfLines(0), .textAlignment(.center))
+        mainLabel.applyLocalized { view in
+            view.text = Strings.initialMain
+        }
+        
+        let subtitleLabel = UILabel().applyStyles(.numberOfLines(0), .textAlignment(.center))
+        subtitleLabel.applyLocalized { view in
+            view.text = Strings.initialSubtitle
+        }
+        
+        let langLabel = UILabel().applyStyles(.numberOfLines(0), .textAlignment(.center))
+        langLabel.applyLocalized { view in
+            view.text = Strings.initialCurrentLang(AppLocalizedManager.shared.language?.rawValue ?? "emty")
+        }
+        
+        let button = DPButton(type: .system) {
+            AppLocalizedManager.shared.language = AppLocalizedManager.shared.language == .ru ? .en : .ru
+        }
+        
+        button.applyLocalized { button in
+            button.applyStyles(.setTitle(Strings.initialChangeBt))
+        }
+        
+        let stackView = UIStackView(arrangedSubviews: [mainLabel, subtitleLabel, langLabel, .init(), button]).applyStyles(
+            .axis(.vertical), .directionalLayoutMargins(.init(top: 16, leading: 16, bottom: 16, trailing: 16))
+        )
+        stackView.addToSuperview(self.view, withConstraints: [
+            .centerYEqualToSuperview(),
+            .leadingEqualToSuperview(),
+            .trailingEqualToSuperview(),
+            .heightEqualToConstant(200)
+        ])
+        
+    }
     
 }

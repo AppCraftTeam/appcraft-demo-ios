@@ -17,6 +17,15 @@
 		E2071AA427D8B8F900756063 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2071AA127D8B8F900756063 /* InitialViewController.swift */; };
 		E2071AA727D8BA8700756063 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2071AA627D8BA8700756063 /* AppCoordinator.swift */; };
 		E2071AAA27D8BAE900756063 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2071AA927D8BAE900756063 /* AuthManager.swift */; };
+		E2213CB027DF421B0006A55E /* AppThemeSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2213CAF27DF421B0006A55E /* AppThemeSettings.swift */; };
+		E2213CB327DF42A70006A55E /* AppThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2213CB227DF42A70006A55E /* AppThemeManager.swift */; };
+		E2213CB527DF42B90006A55E /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2213CB427DF42B90006A55E /* AppTheme.swift */; };
+		E2213CBC27DF459A0006A55E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2213CBE27DF459A0006A55E /* Localizable.strings */; };
+		E2213CE027DF7F940006A55E /* Localizable+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2213CDF27DF7F940006A55E /* Localizable+Generated.swift */; };
+		E22B97D027E08DD100CB191C /* swiftgen-strings-template.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E22B97CE27E08DD100CB191C /* swiftgen-strings-template.stencil */; };
+		E22B97D127E08DD100CB191C /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = E22B97CF27E08DD100CB191C /* swiftgen.yml */; };
+		E22B97D327E08E9500CB191C /* AppLocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B97D227E08E9500CB191C /* AppLocalizationManager.swift */; };
+		E22B97D527E0D06000CB191C /* AppLocalizedLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B97D427E0D06000CB191C /* AppLocalizedLanguage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +39,17 @@
 		E2071AA127D8B8F900756063 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		E2071AA627D8BA8700756063 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		E2071AA927D8BAE900756063 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		E2213CAF27DF421B0006A55E /* AppThemeSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeSettings.swift; sourceTree = "<group>"; };
+		E2213CB227DF42A70006A55E /* AppThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppThemeManager.swift; sourceTree = "<group>"; };
+		E2213CB427DF42B90006A55E /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		E2213CBD27DF459A0006A55E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E2213CBF27DF45AC0006A55E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ../ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		E2213CC027DF45AC0006A55E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E2213CDF27DF7F940006A55E /* Localizable+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Localizable+Generated.swift"; sourceTree = "<group>"; };
+		E22B97CE27E08DD100CB191C /* swiftgen-strings-template.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "swiftgen-strings-template.stencil"; sourceTree = "<group>"; };
+		E22B97CF27E08DD100CB191C /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		E22B97D227E08E9500CB191C /* AppLocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalizationManager.swift; sourceTree = "<group>"; };
+		E22B97D427E0D06000CB191C /* AppLocalizedLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalizedLanguage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,9 +95,10 @@
 			isa = PBXGroup;
 			children = (
 				E2071A6C27D3985300756063 /* AppDelegate.swift */,
-				E2071A7527D3985400756063 /* Assets.xcassets */,
+				E2213CB927DF45790006A55E /* Localization */,
 				E2071AA827D8BADF00756063 /* Managers */,
 				E2071AAB27D8BAF600756063 /* Resources */,
+				E2213CB127DF42940006A55E /* Theme */,
 			);
 			path = ApplicationLayer;
 			sourceTree = "<group>";
@@ -94,8 +115,9 @@
 		E2071A9127D8B6D300756063 /* SupportLayer */ = {
 			isa = PBXGroup;
 			children = (
-				E2071A9827D8B78500756063 /* LaunchScreen.storyboard */,
 				E2071A9227D8B72000756063 /* Info.plist */,
+				E2071A9827D8B78500756063 /* LaunchScreen.storyboard */,
+				E2213CE427E089250006A55E /* Swiftgen */,
 			);
 			path = SupportLayer;
 			sourceTree = "<group>";
@@ -137,8 +159,39 @@
 		E2071AAB27D8BAF600756063 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E2071A7527D3985400756063 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E2213CB127DF42940006A55E /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				E2213CB427DF42B90006A55E /* AppTheme.swift */,
+				E2213CB227DF42A70006A55E /* AppThemeManager.swift */,
+				E2213CAF27DF421B0006A55E /* AppThemeSettings.swift */,
+			);
+			path = Theme;
+			sourceTree = "<group>";
+		};
+		E2213CB927DF45790006A55E /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				E22B97D227E08E9500CB191C /* AppLocalizationManager.swift */,
+				E22B97D427E0D06000CB191C /* AppLocalizedLanguage.swift */,
+				E2213CDF27DF7F940006A55E /* Localizable+Generated.swift */,
+				E2213CBE27DF459A0006A55E /* Localizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		E2213CE427E089250006A55E /* Swiftgen */ = {
+			isa = PBXGroup;
+			children = (
+				E22B97CE27E08DD100CB191C /* swiftgen-strings-template.stencil */,
+				E22B97CF27E08DD100CB191C /* swiftgen.yml */,
+			);
+			path = Swiftgen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +201,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E2071A7D27D3985400756063 /* Build configuration list for PBXNativeTarget "ACDemo" */;
 			buildPhases = (
+				E2213CDA27DF77080006A55E /* SwiftGen */,
 				E2071A6527D3985300756063 /* Sources */,
 				E2071A6627D3985300756063 /* Frameworks */,
 				E2071A6727D3985300756063 /* Resources */,
@@ -187,6 +241,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = E2071A6027D3985300756063;
 			packageReferences = (
@@ -207,12 +262,36 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22B97D027E08DD100CB191C /* swiftgen-strings-template.stencil in Resources */,
+				E22B97D127E08DD100CB191C /* swiftgen.yml in Resources */,
 				E2071A7627D3985400756063 /* Assets.xcassets in Resources */,
+				E2213CBC27DF459A0006A55E /* Localizable.strings in Resources */,
 				E2071A9A27D8B78500756063 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E2213CDA27DF77080006A55E /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nswiftgen config run --config ACDemo/SupportLayer/Swiftgen/swiftgen.yml\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E2071A6527D3985300756063 /* Sources */ = {
@@ -221,10 +300,16 @@
 			files = (
 				E2071AA227D8B8F900756063 /* InitialViewRouter.swift in Sources */,
 				E2071AAA27D8BAE900756063 /* AuthManager.swift in Sources */,
+				E2213CE027DF7F940006A55E /* Localizable+Generated.swift in Sources */,
 				E2071A6D27D3985300756063 /* AppDelegate.swift in Sources */,
+				E2213CB527DF42B90006A55E /* AppTheme.swift in Sources */,
+				E2213CB027DF421B0006A55E /* AppThemeSettings.swift in Sources */,
+				E22B97D327E08E9500CB191C /* AppLocalizationManager.swift in Sources */,
 				E2071AA727D8BA8700756063 /* AppCoordinator.swift in Sources */,
 				E2071AA327D8B8F900756063 /* InitialViewModel.swift in Sources */,
+				E22B97D527E0D06000CB191C /* AppLocalizedLanguage.swift in Sources */,
 				E2071AA427D8B8F900756063 /* InitialViewController.swift in Sources */,
+				E2213CB327DF42A70006A55E /* AppThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,8 +320,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				E2071A9927D8B78500756063 /* Base */,
+				E2213CBF27DF45AC0006A55E /* ru */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		E2213CBE27DF459A0006A55E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E2213CBD27DF459A0006A55E /* en */,
+				E2213CC027DF45AC0006A55E /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -246,6 +341,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -307,6 +403,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
