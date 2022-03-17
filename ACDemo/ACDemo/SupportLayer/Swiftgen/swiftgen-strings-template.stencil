@@ -3,10 +3,10 @@
 
 {% if tables.count > 0 %}
 {% set accessModifier %}{% if param.publicAccess %}public{% else %}internal{% endif %}{% endset %}
+{% set swiftIdentifier %}{% if param.swiftIdentifier %}{{param.swiftIdentifier}}{% else %}normal{% endif %}{% endset %}
 import Foundation
 
 // swiftlint:disable superfluous_disable_command file_length implicit_return
-
 // MARK: - Strings
 
 {% macro parametersBlock types %}{% filter removeNewlines:"leading" %}
@@ -32,31 +32,26 @@ import Foundation
   {% endfor %}
 {% endfilter %}{% endmacro %}
 {% macro recursiveBlock table item %}
-  {% for string in item.strings %}
-  {% if not param.noComments %}
-  {% for line in string.translation|split:"\n" %}
+{% for string in item.strings %}
+{% if not param.noComments %}
+{% for line in string.translation|split:"\n" %}
   /// {{line}}
-  {% endfor %}
-  {% endif %}
-  {% if string.types %}
-  {{accessModifier}} static func {{string.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}({% call parametersBlock string.types %}) -> String {
-    return {{enumName}}.tr("{{table}}", "{{string.key}}", {% call argumentsBlock string.types %})
+{% endfor %}
+{% endif %}
+  {{accessModifier}} static func {{string.name|swiftIdentifier:swiftIdentifier|lowerFirstWord|escapeReservedKeywords}}({% call parametersBlock string.types %}) -> String {
+    {% if string.types %}
+      return {{enumName}}.tr("{{table}}", "{{string.key}}", {% call argumentsBlock string.types %})
+    {% else %}
+      return {{enumName}}.tr("{{table}}", "{{string.key}}") 
+    {% endif %}
   }
-  {% elif param.lookupFunction %}
-  {# custom localization function is mostly used for in-app lang selection, so we want the loc to be recomputed at each call for those (hence the computed var) #}
-  {{accessModifier}} static var {{string.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}}: String { return {{enumName}}.tr("{{table}}", "{{string.key}}") }
-  {% else %}
-  {{accessModifier}} static let {{string.name|swiftIdentifier:"pretty"|lowerFirstWord|escapeReservedKeywords}} = {{enumName}}.tr("{{table}}", "{{string.key}}")
-  {% endif %}
-  {% endfor %}
-  {% for child in item.children %}
-
+{% endfor %}
+{% for child in item.children %}
   {{accessModifier}} enum {{child.name|swiftIdentifier:"pretty"|escapeReservedKeywords}} {
     {% filter indent:2 %}{% call recursiveBlock table child %}{% endfilter %}
   }
-  {% endfor %}
+{% endfor %}
 {% endmacro %}
-
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 

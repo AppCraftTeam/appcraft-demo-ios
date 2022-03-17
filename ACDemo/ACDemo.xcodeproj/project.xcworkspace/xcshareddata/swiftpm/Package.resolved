@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "ACLocalized",
+        "repositoryURL": "https://github.com/AppCraftTeam/appcraft-localized-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "a93940520c71a9f3222fcc81445957ccc006699d",
+          "version": "0.0.1"
+        }
+      },
+      {
         "package": "ACTheme",
         "repositoryURL": "https://github.com/AppCraftTeam/appcraft-theme-ios.git",
         "state": {

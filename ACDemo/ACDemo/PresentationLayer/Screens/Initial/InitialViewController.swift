@@ -45,17 +45,17 @@ class InitialViewController: DPViewController {
         
         let mainLabel = UILabel().applyStyles(.numberOfLines(0), .textAlignment(.center))
         mainLabel.applyLocalized { view in
-            view.text = Strings.initialMain
+            view.text = Localized.initial_main()
         }
         
         let subtitleLabel = UILabel().applyStyles(.numberOfLines(0), .textAlignment(.center))
         subtitleLabel.applyLocalized { view in
-            view.text = Strings.initialSubtitle
+            view.text = Localized.initial_subtitle()
         }
         
         let langLabel = UILabel().applyStyles(.numberOfLines(0), .textAlignment(.center))
         langLabel.applyLocalized { view in
-            view.text = Strings.initialCurrentLang(AppLocalizedManager.shared.language?.rawValue ?? "emty")
+            view.text = Localized.initial_current_lang(AppLocalizedManager.shared.language?.rawValue ?? "emty")
         }
         
         let button = DPButton(type: .system) {
@@ -63,7 +63,7 @@ class InitialViewController: DPViewController {
         }
         
         button.applyLocalized { button in
-            button.applyStyles(.setTitle(Strings.initialChangeBt))
+            button.applyStyles(.setTitle(Localized.initial_change_bt()))
         }
         
         let stackView = UIStackView(arrangedSubviews: [mainLabel, subtitleLabel, langLabel, .init(), button]).applyStyles(

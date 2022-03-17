@@ -8,11 +8,10 @@ strings:
     - templatePath: swiftgen-strings-template.stencil
       params:
         publicAccess: true
-        enumName: Strings
+        enumName: Localized
         bundle: AppLocalizedManager.shared.localizedBundle
-      output: ApplicationLayer/Localization/Localizable+Generated.swift
-
-    #structured-swift5
+        swiftIdentifier: normal
+      output: ApplicationLayer/Localization/Localized+Generated.swift
     
 ## Generate constants for your Assets Catalogs, including constants for images, colors, ARKit resources, etc.
 ##   This example also shows how to provide additional parameters to your template to customize the output.

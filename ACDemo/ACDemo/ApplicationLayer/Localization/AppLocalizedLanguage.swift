@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ACLocalized
 
 public enum AppLocalizedLanguage: String, ACLocalizedLanguageProtocol {
     case ru = "ru"

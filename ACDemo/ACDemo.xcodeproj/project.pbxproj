@@ -21,11 +21,12 @@
 		E2213CB327DF42A70006A55E /* AppThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2213CB227DF42A70006A55E /* AppThemeManager.swift */; };
 		E2213CB527DF42B90006A55E /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2213CB427DF42B90006A55E /* AppTheme.swift */; };
 		E2213CBC27DF459A0006A55E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E2213CBE27DF459A0006A55E /* Localizable.strings */; };
-		E2213CE027DF7F940006A55E /* Localizable+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2213CDF27DF7F940006A55E /* Localizable+Generated.swift */; };
 		E22B97D027E08DD100CB191C /* swiftgen-strings-template.stencil in Resources */ = {isa = PBXBuildFile; fileRef = E22B97CE27E08DD100CB191C /* swiftgen-strings-template.stencil */; };
 		E22B97D127E08DD100CB191C /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = E22B97CF27E08DD100CB191C /* swiftgen.yml */; };
 		E22B97D327E08E9500CB191C /* AppLocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B97D227E08E9500CB191C /* AppLocalizationManager.swift */; };
 		E22B97D527E0D06000CB191C /* AppLocalizedLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B97D427E0D06000CB191C /* AppLocalizedLanguage.swift */; };
+		E22B97D727E1F92600CB191C /* Localized+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B97D627E1F92600CB191C /* Localized+Generated.swift */; };
+		E22BED5A27E1FFE7005E8562 /* ACLocalized in Frameworks */ = {isa = PBXBuildFile; productRef = E22BED5927E1FFE7005E8562 /* ACLocalized */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,11 +46,11 @@
 		E2213CBD27DF459A0006A55E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E2213CBF27DF45AC0006A55E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ../ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		E2213CC027DF45AC0006A55E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		E2213CDF27DF7F940006A55E /* Localizable+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Localizable+Generated.swift"; sourceTree = "<group>"; };
 		E22B97CE27E08DD100CB191C /* swiftgen-strings-template.stencil */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "swiftgen-strings-template.stencil"; sourceTree = "<group>"; };
 		E22B97CF27E08DD100CB191C /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
 		E22B97D227E08E9500CB191C /* AppLocalizationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalizationManager.swift; sourceTree = "<group>"; };
 		E22B97D427E0D06000CB191C /* AppLocalizedLanguage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalizedLanguage.swift; sourceTree = "<group>"; };
+		E22B97D627E1F92600CB191C /* Localized+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Localized+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22BED5A27E1FFE7005E8562 /* ACLocalized in Frameworks */,
 				E2071A8E27D39C2100756063 /* ACTheme in Frameworks */,
 				E2071A8B27D39BDF00756063 /* DPUIKit in Frameworks */,
 			);
@@ -179,7 +181,7 @@
 			children = (
 				E22B97D227E08E9500CB191C /* AppLocalizationManager.swift */,
 				E22B97D427E0D06000CB191C /* AppLocalizedLanguage.swift */,
-				E2213CDF27DF7F940006A55E /* Localizable+Generated.swift */,
+				E22B97D627E1F92600CB191C /* Localized+Generated.swift */,
 				E2213CBE27DF459A0006A55E /* Localizable.strings */,
 			);
 			path = Localization;
@@ -214,6 +216,7 @@
 			packageProductDependencies = (
 				E2071A8A27D39BDF00756063 /* DPUIKit */,
 				E2071A8D27D39C2100756063 /* ACTheme */,
+				E22BED5927E1FFE7005E8562 /* ACLocalized */,
 			);
 			productName = ACDemo;
 			productReference = E2071A6927D3985300756063 /* ACDemo.app */;
@@ -247,6 +250,7 @@
 			packageReferences = (
 				E2071A8927D39BDF00756063 /* XCRemoteSwiftPackageReference "DPUIKit" */,
 				E2071A8C27D39C2100756063 /* XCRemoteSwiftPackageReference "appcraft-theme-ios" */,
+				E22BED5827E1FFE7005E8562 /* XCRemoteSwiftPackageReference "appcraft-localized-ios" */,
 			);
 			productRefGroup = E2071A6A27D3985300756063 /* Products */;
 			projectDirPath = "";
@@ -300,7 +304,6 @@
 			files = (
 				E2071AA227D8B8F900756063 /* InitialViewRouter.swift in Sources */,
 				E2071AAA27D8BAE900756063 /* AuthManager.swift in Sources */,
-				E2213CE027DF7F940006A55E /* Localizable+Generated.swift in Sources */,
 				E2071A6D27D3985300756063 /* AppDelegate.swift in Sources */,
 				E2213CB527DF42B90006A55E /* AppTheme.swift in Sources */,
 				E2213CB027DF421B0006A55E /* AppThemeSettings.swift in Sources */,
@@ -308,6 +311,7 @@
 				E2071AA727D8BA8700756063 /* AppCoordinator.swift in Sources */,
 				E2071AA327D8B8F900756063 /* InitialViewModel.swift in Sources */,
 				E22B97D527E0D06000CB191C /* AppLocalizedLanguage.swift in Sources */,
+				E22B97D727E1F92600CB191C /* Localized+Generated.swift in Sources */,
 				E2071AA427D8B8F900756063 /* InitialViewController.swift in Sources */,
 				E2213CB327DF42A70006A55E /* AppThemeManager.swift in Sources */,
 			);
@@ -549,6 +553,14 @@
 				minimumVersion = 0.0.1;
 			};
 		};
+		E22BED5827E1FFE7005E8562 /* XCRemoteSwiftPackageReference "appcraft-localized-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppCraftTeam/appcraft-localized-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -561,6 +573,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E2071A8C27D39C2100756063 /* XCRemoteSwiftPackageReference "appcraft-theme-ios" */;
 			productName = ACTheme;
+		};
+		E22BED5927E1FFE7005E8562 /* ACLocalized */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E22BED5827E1FFE7005E8562 /* XCRemoteSwiftPackageReference "appcraft-localized-ios" */;
+			productName = ACLocalized;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
